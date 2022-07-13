@@ -7,6 +7,7 @@ import "../styles/index.css";
 
 //import your own components
 import Home from "./component/home.jsx";
+import { Todosapi } from "/workspace/react-hello/src/js/Todosapi.js"
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<Todosapi />, document.querySelector("#app"));
