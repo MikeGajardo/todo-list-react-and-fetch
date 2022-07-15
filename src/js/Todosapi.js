@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 export const Todosapi = (props) => {
@@ -33,6 +33,11 @@ export const Todosapi = (props) => {
           });
       });
   }, []);
+
+  let inputRef = useRef(null)
+	useEffect(() => {
+		inputRef.current.focus()
+	})
 
   let addTodo = e => {
     if (e.keyCode == 13) {
@@ -100,6 +105,7 @@ export const Todosapi = (props) => {
       });
   };
 
+
   return (
     <div>
       <div className="todo-container">
@@ -110,7 +116,8 @@ export const Todosapi = (props) => {
               type="text"
               className="input"
               onKeyDown={addTodo}
-              placeholder="What song is next?"
+              placeholder="What  song  is  next?"
+              ref={inputRef}
             />
           </div>
           <form>
