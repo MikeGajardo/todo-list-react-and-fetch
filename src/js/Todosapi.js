@@ -37,6 +37,7 @@ export const Todosapi = (props) => {
   let inputRef = useRef(null)
 	useEffect(() => {
 		inputRef.current.focus()
+    inputRef.current.value= '';
 	})
 
   let addTodo = e => {
@@ -116,7 +117,7 @@ export const Todosapi = (props) => {
               type="text"
               className="input"
               onKeyDown={addTodo}
-              placeholder="What  song  is  next?"
+              placeholder='What Song is next?'
               ref={inputRef}
             />
           </div>
